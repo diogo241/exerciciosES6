@@ -19,27 +19,28 @@ const person = {
 
 
 //Exercício 1
-// //a - obter os nomes das empresas
+//a - obter os nomes das empresas
 const getCompaniesName = () => {
-  return companies.forEach(company => {
+  const companiesNames = companies.forEach(company => {
     console.log(`Nome da empresa: ${company.name}`);
   })
+  return companiesNames;
 }
 getCompaniesName();
 
-// //b - Obter nome das empresas que foi iniciada após 1987
+//b - Obter nome das empresas que foi iniciada após 1987
 const newestCompanies = () => {
-  const newCompaniews = companies.filter((company) => company.start > 1987);
-  console.log(newCompaniews);
-  // duvida a colocar amanhã
-  //return newCompaniews;
+  const newCompanies = companies.filter((company) => company.start > 1987);
+  console.log(newCompanies);
+  return newCompanies;
 }
 newestCompanies();
 
 //c - soma de todos os valores do array ages, usando o reduce
 const getAgesSum = () => {
   const sum = ages.reduce((accumulator, currentValue) => accumulator + currentValue);
-  return console.log(sum);
+  console.log(sum);
+  return sum;
 };
 getAgesSum();
 
@@ -48,6 +49,7 @@ getAgesSum();
 const extractFirstCompany = () => {
   const {name, category} = companies[0];
   console.log(`${name} and ${category}`);
+  return;
 }
 extractFirstCompany();
 
@@ -56,6 +58,7 @@ extractFirstCompany();
 const extractStreet = () => {
   const {address: street} = person;
   console.log(street);
+  return street;
 }
 extractStreet();
 
@@ -63,6 +66,6 @@ extractStreet();
 const getCompaniesStartEndDate = () => {
   const boomerCompanies = companies.filter((company) => company.start > 1996 && company.start <= 2004);
   console.log(boomerCompanies);
-
+  return boomerCompanies;
 };
 getCompaniesStartEndDate();

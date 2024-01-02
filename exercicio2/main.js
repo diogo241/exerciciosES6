@@ -28,6 +28,7 @@ const getTextDataOlderWay = () => {
       console.log("promise rejected", err);
     });
 };
+getTextDataOlderWay();
 
 
 
